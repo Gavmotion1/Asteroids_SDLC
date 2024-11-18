@@ -23,13 +23,13 @@ While game state is running:
     Spawn starfish at random positions at the top of the screen
     Spawn power-ups randomly based on level
 
-    # Update player movement
+# Update player movement
     If "Left Arrow" is pressed:
         Move submarine left (within screen boundaries)
     If "Right Arrow" is pressed:
         Move submarine right (within screen boundaries)
 
-    # Torpedo logic
+# Torpedo logic
     If "Space" is pressed:
         Fire torpedo from submarine position
         For each starfish:
@@ -37,7 +37,7 @@ While game state is running:
                 Destroy starfish
                 Increase score
 
-    # Starfish movement
+# Starfish movement
     For each starfish:
         Move starfish down the screen based on game speed
         If starfish collides with submarine:
@@ -46,21 +46,21 @@ While game state is running:
         If starfish moves off the bottom of the screen:
             Remove starfish (missed)
 
-    # Power-up logic
+# Power-up logic
     For each power-up:
         Move power-up down the screen
         If submarine collides with power-up:
             Activate power-up effect:
                 e.g., increase score multiplier, slow starfish speed, grant temporary shield
 
-    # Level-up logic
+# Level-up logic
     If score exceeds threshold for next level:
         Increase level
         Increase game speed
         Add new starfish types or patterns
         Add additional power-ups
 
-    # Check for game-over condition
+# Check for game-over condition
     If player health <= 0 or lives <= 0:
         Set game state = game over
 
